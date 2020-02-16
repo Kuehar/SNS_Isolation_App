@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href= "{% static 'css/resources/join.css' %}">
+<link rel="stylesheet" type="text/css" href="css/vendors/ionicons.min.css">
+{% endblock %}
+
+{% block content %}
+<!-- メインコンテンツ　-->
+<main role="main" class="inner cover">
+    <h2 class="cover-heading">Join Secreter</h2>
+    <form method="POST" action=#>
+        {% csrf_token %}
+        <label>E-Mail</label>
+        {{ form.email|add_class:'form-control'}}
+        {{ form.email.errors }}
+        <label>Password</label>
+        {{ form.password|add_class:'form-control' }}
+        {{ form.password.errors }}
+
+        <button type = "submit" class="btn btn-lg btn-secondary">Sign Up</button>
+
+
+        <!-- <ul class="social-links">
+            <li><a href="#"><i class="ion-social-twitter"></i></li>
+            <li><a href="#"><i class="ion-social-twitter"></i></li>
+            <li><a href="#"><i class="ion-social-twitter"></i></li>
+            <li><a href="#"><i class="ion-social-twitter"></i></li>
+        </ul>
+        -->
+
+
+
+    </form>
+</main>
+{% endblock %}
+

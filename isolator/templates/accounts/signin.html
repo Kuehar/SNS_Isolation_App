@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href= "{% static 'css/resources/join.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- メインコンテンツ　-->
+<main role="main" class="inner cover">
+
+    {% if form.errors %}
+    <p>Your E-Mail and Password didn't match</p>
+    {% endif %}
+
+    {% if next %}
+        {% if user.is_authenticated %}
+        <p>You don't have access to this page.</p>
+        {% else %}
+        <p>Please sign in to see this page.</p>
+        {% endif %}
+    {% endif %}
+
+
+    <h2 class="cover-heading">SignIn Secreter</h2>
+    <form method="POST" action=#>
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    {{form.non_field_errors}}
+                    {% for field in form %}
+                    {% endfor %}
+                    <button type="submit" class="btn btn-lg btn-secondary">Sign In</button>
+                    <input type="hidden" name="next" value="{{next}}"/>
+                    {% csrf_token %}
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="ネタバレのない生活を。/Share Your Thoughts.">
+    {% block meta_tag %}{% endblock %}
+
+    {# --- CSS  ---  #}
+    <link rel="stylesheet" type="text/css" href= "{% static 'css/resources/base.css' %}">
+    <link rel="stylesheet" type="text/css" href= "{% static 'css/vendors/bootstrap.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
+
+    {% block css %}{% endblock %}
+
+
+    {% block title %}{% endblock %}
+</head>
+<body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Secreter</h3>
+            <nav class="nav nav-masthead justify-content-center">
+              <a class="nav-link" href="{% url 'top' %}">Home</a>
+              <a class="nav-link" href="{% url 'accounts:signin' %}">Sign In</a>
+              <a class="nav-link" href="{% url 'top' %}">Time Line</a>
+          </nav>
+        </div>
+      </header>
+
+        {% block content %}
+
+        {% endblock %}
+
+
+        <footer>
+            <!--
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+        </div>
+
+            <div class="col span-1-of-2">
+                <ul class="social-links">
+                    <li><a href="#"><i class="ion-social-twitter"></i></li>
+                    <li><a href="#"><i class="ion-social-facebook"></i></li>
+                    <li><a href="#"><i class="ion-social-googleplus"></i></li>
+                    <li><a href="#"><i class="ion-social-instagram"></i></li>
+                </ul>
+            </div>
+            -->
+
+
+        <div class="row">
+            <a href="https://twitter.com/kueharX"> Made by @kueharX </a>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/vendors/bootstrap.min.js'%}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+</body>
+</html>
