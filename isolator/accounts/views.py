@@ -8,20 +8,25 @@ from .forms import RegisterForm,SigninForm
 
 # Create your views here.
 
-"""会員登録"""
+
+"""
+Django provide a lot of types Generic View and those are very flexible.
+From this viewpoints,View is basically created by ClassBaseView.
+"""
+
+"""Register function"""
 def join(request):
     params = {
         'form': RegisterForm(),
     }
     return render(request,'accounts/join.html',params)
 
-
-"""ログインページ"""
+"""Login Transition"""
 class Signin(LoginView):
     form_class = SigninForm
     template_name = 'accounts/signin.html'
 
-"""ログアウトページ"""
+"""Logout transition"""
 class Logout(LogoutView):
     template_name = 'accounts/signin.html'
 

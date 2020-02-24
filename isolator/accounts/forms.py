@@ -1,9 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 
-
+"""Form of user registration"""
 class RegisterForm(forms.Form):
-    """ユーザー登録フォーム"""
     email = forms.CharField(
         label='E-Mail',
         max_length=200,
@@ -19,9 +18,8 @@ class RegisterForm(forms.Form):
         widget=forms.PasswordInput(attrs={'class': 'input-height'})
     )
 
-
+"""Form of signin process"""
 class SigninForm(AuthenticationForm):
-    """ユーザーログインフォーム"""
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
