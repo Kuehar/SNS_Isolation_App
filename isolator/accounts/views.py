@@ -21,8 +21,9 @@ def join(request):
     }
     return render(request,'accounts/join.html',params)
 
+
 """Login Transition"""
-class Signin(LoginView):
+class SigninView(LoginView):
     form_class = SigninForm
     template_name = 'accounts/signin.html'
 

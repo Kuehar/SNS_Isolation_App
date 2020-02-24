@@ -11,7 +11,7 @@
 <main role="main" class="inner cover">
 
     {% if form.errors %}
-    <p>Your E-Mail and Password didn't match</p>
+    <p>Your Mail address and Password didn't match</p>
     {% endif %}
 
     {% if next %}
@@ -24,12 +24,15 @@
 
 
     <h2 class="cover-heading">SignIn Secreter</h2>
-    <form method="POST" action=#>
+    <form method="POST" action=''>
         <div class="col-md-6 offset-md-3">
             <div class="card">
                 <div class="card-body">
                     {{form.non_field_errors}}
                     {% for field in form %}
+                    {{field}}
+                    <hr>
+                    {{field.errors}}
                     {% endfor %}
                     <button type="submit" class="btn btn-lg btn-secondary">Sign In</button>
                     <input type="hidden" name="next" value="{{next}}"/>

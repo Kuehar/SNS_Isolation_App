@@ -18,7 +18,7 @@ class RegisterForm(forms.Form):
         widget=forms.PasswordInput(attrs={'class': 'input-height'})
     )
 
-"""Form of signin process"""
+"""Form of Signin process"""
 class SigninForm(AuthenticationForm):
 
     def __init__(self, *args, **kwargs):

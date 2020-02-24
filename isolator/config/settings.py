@@ -122,10 +122,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
 
+#Added backend
 
 # ログイン画面の設定
 LOGIN_URL = 'accounts:signin'
 # ログイン後にtop.htmlにリダイレクト
 LOGIN_REDIRECT_URL = 'top'
+
+# display mail to console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+AUTH_USER_MODEL = 'accounts.User'

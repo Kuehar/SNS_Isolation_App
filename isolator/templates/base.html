@@ -10,6 +10,9 @@
 
     {# --- CSS  ---  #}
     <link rel="stylesheet" type="text/css" href= "{% static 'css/resources/base.css' %}">
+    <link rel="stylesheet" type="text/css" href= "{% static 'css/vendors/ionicons.min.css' %}">
+    <link rel="stylesheet" type="text/css" href= "{% static 'css/vendors/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href= "{% static 'css/vendors/normalize.css' %}">
     <link rel="stylesheet" type="text/css" href= "{% static 'css/vendors/bootstrap.min.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
@@ -26,9 +29,9 @@
         <div class="inner">
           <h3 class="masthead-brand">Secreter</h3>
             <nav class="nav nav-masthead justify-content-center">
-              <a class="nav-link" href="{% url 'top' %}">Home</a>
+              <a class="nav-link" href="{% url 'top:index' %}">Home</a>
               <a class="nav-link" href="{% url 'accounts:signin' %}">Sign In</a>
-              <a class="nav-link" href="{% url 'top' %}">Time Line</a>
+              <a class="nav-link" href="{% url 'top:index' %}">Time Line</a>
           </nav>
         </div>
       </header>
@@ -39,32 +42,23 @@
 
 
         <footer>
-            <!--
         <div class="row">
             <div class="col span-1-of-2">
                 <ul class="footer-nav">
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Press</a></li>
+                    <li><a href="https://twitter.com/kueharX"">About me</a></li>
                 </ul>
             </div>
         </div>
-
+            <!--
             <div class="col span-1-of-2">
                 <ul class="social-links">
                     <li><a href="#"><i class="ion-social-twitter"></i></li>
                     <li><a href="#"><i class="ion-social-facebook"></i></li>
-                    <li><a href="#"><i class="ion-social-googleplus"></i></li>
                     <li><a href="#"><i class="ion-social-instagram"></i></li>
                 </ul>
             </div>
             -->
-
-
-        <div class="row">
-            <a href="https://twitter.com/kueharX"> Made by @kueharX </a>
-        </div>
-    </footer>
+        </footer>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -74,5 +68,11 @@
     <script type="text/javascript" src="{% static 'js/vendors/bootstrap.min.js'%}"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+                integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+                integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+                crossorigin="anonymous"></script>
 </body>
 </html>
